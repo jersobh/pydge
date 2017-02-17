@@ -10,4 +10,4 @@ from core.router import routes
 loop = asyncio.get_event_loop()
 app = web.Application(loop=loop)
 routes(app)
-web.run_app(app, host='0.0.0.0', port=80)
+web.run_app(app, host='0.0.0.0', port=8080)
