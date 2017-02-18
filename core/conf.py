@@ -5,4 +5,4 @@ conf.py
 """
 DB = 'pydge'
 DB_USER = 'postgres'
-GENERATE_MODELS = True
+GENERATE_MODELS = False #use True or False to generate models
