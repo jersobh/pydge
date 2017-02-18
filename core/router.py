@@ -3,11 +3,11 @@
 """
 router.py
 """
-from views import render
+from controllers import index
 
 def routes(app):
     app.router.add_static('/static/',
                       path=str('views/static'),
                       name='static')
-    app.router.add_get('/', render.index)
-    app.router.add_get('/hey/', render.hey)
+    app.router.add_get('/', index.main)
+    #app.router.add_get('/hey/', render.hey)

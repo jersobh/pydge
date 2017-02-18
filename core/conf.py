@@ -3,6 +3,5 @@
 """
 conf.py
 """
-
 DB = 'pydge'
-DB_USER = 'postgres'
+GENERATE_MODELS = True
