@@ -8,8 +8,6 @@ import jinja2
 import aiohttp_jinja2
 from aiohttp import web
 from core.router import routes
-from core.conf import *
-from models.db import *
 
 loop = asyncio.get_event_loop()
 app = web.Application(loop=loop)

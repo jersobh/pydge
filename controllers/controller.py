@@ -4,6 +4,8 @@
 controller.py
 """
 from views import render
+from models import db
+from models import gen
 
 def index(request):
     context = {'name': 'Pydge Framework', 'github': 'https://github.com/jersobh/pydge'}
