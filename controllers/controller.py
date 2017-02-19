@@ -13,3 +13,10 @@ def index(request):
     template = 'index.jinja2'
     #models.Users.create(username='Charlie') #my example has USERS table with username field)
     return render.view(request, template, context)
+
+def jsonExample(request):
+    data = {}
+    data['name'] = 'Jhonny'
+    data['surname'] = 'test'
+    status = 200
+    return render.json(data, status)

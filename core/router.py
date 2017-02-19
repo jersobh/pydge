@@ -10,4 +10,4 @@ def routes(app):
                       path=str('views/static'),
                       name='static')
     app.router.add_get('/', controller.index)
-    #app.router.add_get('/hey/', render.hey)
+    app.router.add_get('/json/', controller.jsonExample)

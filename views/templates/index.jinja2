@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <meta property="og:title" content="">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="">
-	<meta property="og:site_name" content="">
-	<meta property="og:description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/static/css/font-awesome.min.css">
@@ -28,40 +28,41 @@
 <body>
 
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="logo" href="#"><img src="/static/img/logo.svg" alt="Logo"></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/static/#be-the-first" class="scroll">About</a></li>
-          </ul>
-        </div><!--/.navbar-collapse -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="logo" href="#"><img src="/static/img/logo.svg" alt="Logo"></a>
       </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/static/#be-the-first" class="scroll">About</a></li>
+          <li><a href="/static/#examples" class="scroll">Examples</a></li>
+        </ul>
+      </div><!--/.navbar-collapse -->
     </div>
+  </div>
 
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-6">
-            <a href="#"><img src="/static/img/logo.svg" alt="Logo"></a>
-          </div>
-          <div class="col-xs-6 signin text-right navbar-nav">
-            <a href="/static/#be-the-first" class="scroll">About</a>&nbsp; &nbsp;<a href="{{ github }}"><i class="fa fa-github"></i> Github</a>
-          </div>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <a href="#"><img src="/static/img/logo.svg" alt="Logo"></a>
         </div>
+        <div class="col-xs-6 signin text-right navbar-nav">
+          <a href="#be-the-first" class="scroll">About</a>&nbsp; &nbsp;<a href="#examples" class="scroll">Examples</a>&nbsp; &nbsp;<a href="{{ github }}"><i class="fa fa-github"></i> Github</a>
+        </div>
+      </div>
 
-        <div class="row header-info">
-          <div class="col-sm-10 col-sm-offset-1 text-center">
-            <h1 class="wow fadeIn">{{ name }}</h1>
-            <br />
-            <p class="lead wow fadeIn" data-wow-delay="0.5s">A web framework written in python3 <br>
+      <div class="row header-info">
+        <div class="col-sm-10 col-sm-offset-1 text-center">
+          <h1 class="wow fadeIn">{{ name }}</h1>
+          <br />
+          <p class="lead wow fadeIn" data-wow-delay="0.5s">A web framework written in python3 <br>
             Using Async.io, jinja2 and peewee</p>
             <br />
 
@@ -79,8 +80,8 @@
     </header>
 
     <div class="mouse-icon hidden-xs">
-				<div class="scroll"></div>
-			</div>
+      <div class="scroll"></div>
+    </div>
 
     <section id="be-the-first" class="pad-xl">
       <div class="container">
@@ -92,16 +93,91 @@
         </div>
         <div id="limages" style="">
 
-	<div class="wow fadeInUp lm" data-wow-delay="1s" style="float:left;">
-	        <img src="/static/img/aiohttp.png">
+          <div class="wow fadeInUp lm" data-wow-delay="1s" style="float:left;">
+            <img src="/static/img/aiohttp.png">
+          </div>
+          <div class="wow fadeInUp lm" data-wow-delay="1s" style="float:left;">
+            <img src="/static/img/python.png">
+          </div>
+          <div class="wow fadeInUp lm" data-wow-delay="1s" style="float:left;">
+            <img src="/static/img/jinja2.png">
+          </div>
         </div>
-	<div class="wow fadeInUp lm" data-wow-delay="1s" style="float:left;">
-	        <img src="/static/img/python.png">
+      </div>
+    </section>
+
+    <section id="examples" class="pad-xl">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 text-center margin-30 wow fadeIn" data-wow-delay="0.6s" style="background:#333;">
+            <h2>Examples</h2>
+            <h4>Rendering an html template</h4>
+            <p class="lead">A controller example for rendering an html template with jinja2:</p>
+            <code style="text-align:left;background:none;">
+              <pre>
+                def index(request):
+                  context = {'name': 'Pydge Framework', 'github': 'https://github.com/jersobh/pydge'}
+                  template = 'index.jinja2'
+                  return render.view(request, template, context)
+              </pre>
+            </code>
+            <p class="lead">Context is an object with the template variables. The templates must be placed at /views/templates.</p>
+            <h4>Json response</h4>
+            <p class="lead">A controller example for json responses:</p>
+            <code style="text-align:left;background:none;">
+              <pre>
+                def jsonExample(request):
+                  data = {}
+                  data['name'] = 'Jhonny'
+                  data['surname'] = 'test'
+                  status = 200
+                  return render.json(data, status)
+              </pre>
+            </code>
+            <p class="lead">Just set the data (array) and the status code. Also the headers are optional, just change it to render.json(data, status, headers). </p>
+            <h4>Peewee CRUD</h4>
+            <p class="lead">Querying is easy. Let's do it with a postgresql table "USERS". Just follow those examples: </p>
+            <p>Insert</p>
+            <code style="text-align:left;background:none;">
+              <pre>
+                models.Users.create(username='Charlie', password='123456')
+              </pre>
+            </code>
+            <p>Update</p>
+            <code style="text-align:left;background:none;">
+              <pre>
+                models.Users.update(username='Brown').where(User.id == 1)
+              </pre>
+            </code>
+            <p>Select a single record</p>
+            <code style="text-align:left;background:none;">
+              <pre>
+                models.User.get(User.id == 1)
+              </pre>
+            </code>
+            <p>Select multiple records</p>
+            <code style="text-align:left;background:none;">
+              <pre>
+                for user in models.User.select():
+                  print user.username
+              </pre>
+            </code>
+            <p>Filtering records</p>
+            <code style="text-align:left;background:none;">
+              <pre>
+                user = models.User.get(User.username == 'Charlie')
+              </pre>
+            </code>
+            <p>Deleting records</p>
+            <code style="text-align:left;background:none;">
+              <pre>
+                users = models.User.get(User.id == 1)
+                users.delete_instance()
+              </pre>
+            </code>
+            <p class="lead">Pretty easy, isn't it? More doc can be found at <a href="https://github.com/coleifer/peewee/blob/master/docs/peewee/querying.rst">the docs</a> </p>
+          </div>
         </div>
-	<div class="wow fadeInUp lm" data-wow-delay="1s" style="float:left;">
-	        <img src="/static/img/jinja2.png">
-        </div>
-	</div>
       </div>
     </section>
 
@@ -119,23 +195,23 @@
 
           <div class="col-sm-4 text-right">
             <p><small>Copyright &copy; 2014. All rights reserved. <br>
-	            Created by <a href="/static/http://visualsoldiers.com">Visual Soldiers</a></small></p>
+              Created by <a href="/static/http://visualsoldiers.com">Visual Soldiers</a></small></p>
+            </div>
           </div>
+
         </div>
-
-      </div>
-    </footer>
+      </footer>
 
 
-    <!-- Javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/static/js/jquery-1.11.0.min.js"><\/script>')</script>
-    <script src="/static/js/wow.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/main.js"></script>
+      <!-- Javascript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="/static/js/jquery-1.11.0.min.js"><\/script>')</script>
+      <script src="/static/js/wow.min.js"></script>
+      <script src="/static/js/bootstrap.min.js"></script>
+      <script src="/static/js/main.js"></script>
 
 
     </body>
-</html>
+    </html>
