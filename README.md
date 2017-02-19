@@ -17,7 +17,7 @@ It will install all required python packages.
 
 You may need to adjust some settings based on your own enviroment. The /core/conf.py file holds those confs.
 
-> DB = (string) Your db name
+ DB = (string) Your db name
  DB_USER = (string) Your db's user
  DB_PASS = (string) Your db's password
  DB_PORT = (int) Your db's port, like 3306 (mysql) or 5432 (postgresql)
