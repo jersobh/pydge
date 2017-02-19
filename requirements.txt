@@ -1,0 +1,5 @@
+aiohttp==1.3.2
+aiohttp_jinja2==0.13.0
+Jinja2==2.9.5
+peewee==2.8.5
+peewee_async==0.5.6

@@ -11,5 +11,5 @@ from models import models
 def index(request):
     context = {'name': 'Pydge Framework', 'github': 'https://github.com/jersobh/pydge'}
     template = 'index.jinja2'
-    models.Users.create(username='Charlie') #my example has USERS table with username field)
+    #models.Users.create(username='Charlie') #my example has USERS table with username field)
     return render.view(request, template, context)
