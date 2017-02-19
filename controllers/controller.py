@@ -4,7 +4,6 @@
 controller.py
 """
 from views import render
-from models import db
 from models import gen
 from models import models
 
