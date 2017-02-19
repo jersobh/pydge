@@ -4,6 +4,7 @@
 conf.py
 """
 DB = 'pydge'
+DB_HOST = 'localhost'
 DB_USER = 'postgres'
 DB_PASS = ''
 DB_PORT = 5432

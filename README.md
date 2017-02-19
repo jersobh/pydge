@@ -19,6 +19,8 @@ You may need to adjust some settings based on your own enviroment. The /core/con
 
 > DB = (string) Your db name
 
+> DB_HOST = (string) Your db host
+
 > DB_USER = (string) Your db's user
 
 > DB_PASS = (string) Your db's password
