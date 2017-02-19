@@ -17,13 +17,19 @@ It will install all required python packages.
 
 You may need to adjust some settings based on your own enviroment. The /core/conf.py file holds those confs.
 
- DB = (string) Your db name
- DB_USER = (string) Your db's user
- DB_PASS = (string) Your db's password
- DB_PORT = (int) Your db's port, like 3306 (mysql) or 5432 (postgresql)
- DB_TYPE = (string) Possible options are: sqlite, mysql, postgresql
- APP_PORT = (int) The port used by your app. Default's 8080, so it can be accessed on http://localhost:8080
- GENERATE_MODELS = (bool) If is set True, then the models will be automagically generated. You may set False after running a first time, because you may not want to re-generate it each request.
+> DB = (string) Your db name
+
+> DB_USER = (string) Your db's user
+
+> DB_PASS = (string) Your db's password
+
+> DB_PORT = (int) Your db's port, like 3306 (mysql) or 5432 (postgresql)
+
+> DB_TYPE = (string) Possible options are: sqlite, mysql, postgresql
+
+> APP_PORT = (int) The port used by your app. Default's 8080, so it can be accessed on http://localhost:8080
+
+> GENERATE_MODELS = (bool) If is set True, then the models will be automagically generated. You may set False after running a first time, because you may not want to re-generate it each request.
 
 ### Run
 Pydge requires python 3.5+. I'm on Arch linux, and I have python 3.6 installed.
