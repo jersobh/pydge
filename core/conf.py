@@ -3,11 +3,11 @@
 """
 conf.py
 """
-DB = 'pydge'
+DB = 'exemplo'
 DB_HOST = 'localhost'
 DB_USER = 'postgres'
 DB_PASS = ''
 DB_PORT = 5432
 DB_TYPE = 'postgresql'
 APP_PORT = 8080
-GENERATE_MODELS = False #use True or False to generate models
+GENERATE_MODELS = True #use True or False to generate models
