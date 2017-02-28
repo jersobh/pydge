@@ -4,6 +4,12 @@ Pydge is a python 3.5+ framework using async.io, jinja2 and peewee ORM.
 
 ### Install
 
+```sh
+$ sh run.sh
+```
+
+#### Or
+
 First install the requirements.txt
 
 ```sh
