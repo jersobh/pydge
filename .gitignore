@@ -3,3 +3,4 @@ controllers/__pycache__
 models/__pycache__
 models/models.py
 views/__pycache__
+pydge_env
