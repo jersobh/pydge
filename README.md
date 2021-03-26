@@ -1,6 +1,6 @@
 # Pydge Framework
 
-Pydge is a python 3.5+ framework using async.io, jinja2 and peewee ORM.
+Pydge is a python 3.5+ bloilerplate using asyncio, jinja2 and peewee ORM.
 
 ### Install
 
